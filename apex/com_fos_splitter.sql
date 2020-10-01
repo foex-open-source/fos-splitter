@@ -478,7 +478,7 @@ wwv_flow_api.create_plugin(
 '<p>The subregions can be split horizontally or vertically, with numerous other layout options.</p>',
 '<p>This region <strong>must</strong> have exactly 2 subregions.</p>',
 '<p>This region works best with a template without margins or padding, such as Blank With Attributes.</p>',
-'<p>This plug-in leverages the Spitter widget that is used in Page Designer and is already included in your APEX installation. It is not included in this plug-in, but is directly referenced from the APEX images.</p>'))
+'<p>This plug-in leverages the Spitter widget that is used in Page Designer. We have included it in this plug-in, as it required a few minor tweaks to support splitters hidden behind tabs, collapsed regions etc.</p>'))
 ,p_version_identifier=>'20.1.1'
 ,p_about_url=>'https://fos.world'
 ,p_plugin_comment=>wwv_flow_string.join(wwv_flow_t_varchar2(
