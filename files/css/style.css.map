@@ -1,6 +1,2 @@
-
-
 {"version":3,"sources":["style.css"],"names":[],"mappings":"AACA,8B,CACA,8B,CACE,W,CAGF,kB,CACE,a,CACA,a,CACA,c,CAGF,uB,CACE,c,CACA,e","file":"style.css","sourcesContent":["/* the default z-index is too low if the region contains an IG */\n.fos-Splitter .a-Splitter-barH,\n.fos-Splitter .a-Splitter-barV {\n  z-index: 400;\n}\n\n.fos-Splitter > .row {\n  overflow: auto;\n  margin-left: 0px;\n  margin-right: 0px;\n}\n\n.fos-Splitter > .row > .col{\n  padding-left: 0px;\n  padding-right: 0px;\n}\n"]}
-
-
 

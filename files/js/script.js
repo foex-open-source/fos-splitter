@@ -1,5 +1,3 @@
-
-
 /* global apex,$,$v */
 
 window.FOS = window.FOS || {};
@@ -279,6 +277,4 @@ window.FOS = window.FOS || {};
         $('.' + C_FOS_SPLITTER_CLASS).trigger('resize');
     });
 })(apex.jQuery);
-
-
 

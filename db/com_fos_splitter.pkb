@@ -1,5 +1,3 @@
-
-
 create or replace package body com_fos_splitter
 as
 
@@ -400,7 +398,5 @@ end;
 
 end;
 /
-
-
 
 

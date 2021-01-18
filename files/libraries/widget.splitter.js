@@ -1,5 +1,3 @@
-
-
 /*global apex*/
 /*!
  Splitter - a jQuery UI based widget for dynamically dividing the available space for two sub regions horizontally or vertically.
@@ -742,7 +740,5 @@
     }
 
 })(apex.jQuery, apex.util, apex.debug);
-
-
 
 

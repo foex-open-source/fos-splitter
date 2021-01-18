@@ -1,5 +1,3 @@
-
-
 create or replace package com_fos_splitter
 as
 
@@ -18,7 +16,5 @@ as
 
 end;
 /
-
-
 
 
