@@ -14,5 +14,11 @@
   padding-left: 0px;
   padding-right: 0px;
 }
-
+/**
+ * Fix provided by Roel Hartman to avoid losing focus to an iframe when
+ * resizing fast and the cursor tracking ahead over the iframe
+ */
+.a-Splitter-barH.is-active ~ .fos-Splitter-region {
+  pointer-events : none;
+}
 

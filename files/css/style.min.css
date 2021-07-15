@@ -1,3 +1,3 @@
-.fos-Splitter .a-Splitter-barH,.fos-Splitter .a-Splitter-barV{z-index:400}.fos-Splitter>.row{overflow:auto;margin-left:0;margin-right:0}.fos-Splitter>.row>.col{padding-left:0;padding-right:0}
+.fos-Splitter .a-Splitter-barH,.fos-Splitter .a-Splitter-barV{z-index:400}.fos-Splitter>.row{overflow:auto;margin-left:0;margin-right:0}.fos-Splitter>.row>.col{padding-left:0;padding-right:0}.a-Splitter-barH.is-active~.fos-Splitter-region{pointer-events:none}
 /*# sourceMappingURL=style.css.map*/
 
