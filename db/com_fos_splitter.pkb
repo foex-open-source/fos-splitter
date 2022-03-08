@@ -179,9 +179,9 @@ end;
 
 -- helper function for getting the title, collapse and restore messages
 function get_message
-    ( p_type      varchar2 -- in [collapse | restore]
-    , p_attribute varchar2
-    )
+  ( p_type      varchar2 -- in [collapse | restore]
+  , p_attribute varchar2
+  )
 return varchar2
 as
     l_collapse_text_msg varchar2(100) := 'APEX.SPLITTER.COLLAPSE_TEXT';
@@ -206,10 +206,10 @@ end;
 
 -- main plug-in entry point
 function render
-    ( p_region              apex_plugin.t_region
-    , p_plugin              apex_plugin.t_plugin
-    , p_is_printer_friendly boolean
-    )
+  ( p_region              apex_plugin.t_region
+  , p_plugin              apex_plugin.t_plugin
+  , p_is_printer_friendly boolean
+  )
 return apex_plugin.t_region_render_result
 as
     l_result            apex_plugin.t_region_render_result;
@@ -267,7 +267,7 @@ as
 begin
 
     --debug
-    if apex_application.g_debug
+    if apex_application.g_debug and substr(:DEBUG,6) >= 6
     then
         apex_plugin_util.debug_region
             ( p_plugin => p_plugin
@@ -336,9 +336,9 @@ end;
 
 -- ajax callback for storing the current splitter position as a user preference
 function ajax
-    ( p_region apex_plugin.t_region
-    , p_plugin apex_plugin.t_plugin
-    )
+  ( p_region apex_plugin.t_region
+  , p_plugin apex_plugin.t_plugin
+  )
 return apex_plugin.t_region_ajax_result
 as
     -- error handling
@@ -348,7 +348,7 @@ as
     l_return       apex_plugin.t_region_ajax_result;
 begin
     --debug
-    if apex_application.g_debug
+    if apex_application.g_debug and substr(:DEBUG,6) >= 6
     then
         apex_plugin_util.debug_region
             ( p_plugin => p_plugin

@@ -71,14 +71,14 @@ window.FOS = window.FOS || {};
 
                 // calculate the position out of a number of options
                 if (config.positionFunction) {
-                    position = config.positionFunction();
+                    position = Math.floor(config.positionFunction());
                 } else if (config.positionCode !== undefined) {
                     var code = config.positionCode,
                         size = (config.orientation == 'horizontal' ? splitter$.width() : config.heightFunction());
 
                     // applying the 0, 1/4, 1/3, 1/2 ... proportions
                     var positionCodeArr = code.split('/');
-                    position = positionCodeArr.length > 1 ? Math.round(size * positionCodeArr[0] / positionCodeArr[1]) : 0;
+                    position = positionCodeArr.length > 1 ? Math.floor(size * positionCodeArr[0] / positionCodeArr[1]) : 0;
 
                     if (position > 0) {
                         position -= 4; // half the splitter width
