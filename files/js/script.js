@@ -195,7 +195,7 @@ window.FOS = window.FOS || {};
                     fixMisc();
 
                     // resizes any sub-splitters
-                    splitter$.find('.' + C_FOS_SPLITTER_CLASS).trigger('resize');
+                    splitter$.find('.' + C_FOS_SPLITTER_CLASS + ':visible').trigger('resize');
 
                     // fire the resize event
                     apex.event.trigger('#' + config.regionId, 'fos-splitter-after-resize', config);
@@ -216,7 +216,7 @@ window.FOS = window.FOS || {};
             }
 
             // resize any sub-splitters in case of timing issues
-            splitter$.find('.' + C_FOS_SPLITTER_CLASS).trigger('resize');
+            splitter$.find('.' + C_FOS_SPLITTER_CLASS + ':visible').trigger('resize');
 
             // fire the after render event
             apex.event.trigger('#' + config.regionId, 'fos-splitter-after-render', config);
@@ -262,19 +262,19 @@ window.FOS = window.FOS || {};
      */
     $(window).on('resize', apex.util.debounce(function () {
         // resize all fos splitters on the page
-        $('.' + C_FOS_SPLITTER_CLASS).trigger('resize');
+        $('.' + C_FOS_SPLITTER_CLASS + ':visible').trigger('resize');
     }, 100));
 
     // UT specific actions
     $('#t_TreeNav').on('theme42layoutchanged', function () {
         // first wait for the collapse/expand animation to finish
         setTimeout(function () {
-            $('.' + C_FOS_SPLITTER_CLASS).trigger('resize');
+            $('.' + C_FOS_SPLITTER_CLASS + ':visible').trigger('resize');
         }, 250);
     });
 
     $(window).on('apexreadyend apexwindowresized', function () {
-        $('.' + C_FOS_SPLITTER_CLASS).trigger('resize');
+        $('.' + C_FOS_SPLITTER_CLASS + ':visible').trigger('resize');
     });
 })(apex.jQuery);
 
